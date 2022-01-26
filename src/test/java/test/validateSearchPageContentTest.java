@@ -17,22 +17,14 @@ public class validateSearchPageContentTest extends genericMethods {
     public SearchedPage searched_page_obj;
     public static Logger log = LogManager.getLogger(genericMethods.class.getName());
 
-//    @BeforeSuite
-//    public void initializing_directories()
-//    {
-//        System.out.println("In Before Suit ");
-//        runnerConfiguration.set_date();
-//        runnerConfiguration.set_time();
-//        runnerConfiguration.create_and_set_reports_directory();
-//
-//    }
+
     @BeforeTest
     public void initialize() {
         driver = initialiseDriver();
     }
 
     @Test(dataProvider = "getData", testName = "Search Text on search engine and verify first link text on searched page")
-    public void validate_first_link(String text_to_input, String expected_result){
+    public void validate_first_link(String text_to_input, String expected_result) throws Exception {
         String test_case_name = new Object(){}.getClass().getEnclosingMethod().getName();
         log.info("************************************************");
         log.info("Test case 1 started");
