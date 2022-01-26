@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="sourceCode.Listeners"/>
+  </listeners>
+  <test thread-count="5" verbose="0" name="Validating first Searched Link Text via search engine(failed)">
+    <classes>
+      <class name="test.validateSearchPageContentTest">
+        <methods>
+          <include name="validate_first_link" invocation-numbers="0"/>
+          <include name="initialize"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- test.validateSearchPageContentTest -->
+    </classes>
+  </test> <!-- Validating first Searched Link Text via search engine(failed) -->
+</suite> <!-- Failed suite [Suite] -->
