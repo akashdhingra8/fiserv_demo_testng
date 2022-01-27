@@ -8,7 +8,6 @@ import org.testng.annotations.*;
 import pageObjects.LandingPage;
 import pageObjects.SearchedPage;
 import sourceCode.genericMethods;
-import sourceCode.runnerConfiguration;
 
 
 public class validateSearchPageContentTest extends genericMethods {
@@ -23,19 +22,20 @@ public class validateSearchPageContentTest extends genericMethods {
         driver = initialiseDriver();
     }
 
-    @Test(dataProvider = "getData", testName = "Search Text on search engine and verify first link text on searched page")
-    public void validate_first_link(String text_to_input, String expected_result) throws Exception {
+    @Test(testName = "Search Text on search engine and verify first link text on searched page")
+    public void validate_first_link() throws Exception {
         String test_case_name = new Object(){}.getClass().getEnclosingMethod().getName();
         log.info("************************************************");
         log.info("Test case 1 started");
         log.info("Test case name --> " + test_case_name);
-        browseURL(driver, get_value_from_property_file("url"), test_case_name,0);
+        browseURL(driver, get_value_from_property_file("resource","url"), test_case_name,0);
         log.info("url is invoked ");
 
         landing_page_obj = new LandingPage(driver);
         clearInput(driver, landing_page_obj.search_box, test_case_name,1);
         log.info("Input box cleared ");
 
+        String text_to_input = get_value_from_property_file("Test_data",test_case_name+"_search_text");
         inputWithEnterPress(driver, landing_page_obj.search_box, test_case_name, text_to_input,2);
         log.info("text entered");
 
@@ -43,6 +43,7 @@ public class validateSearchPageContentTest extends genericMethods {
         waitForVisibility(driver, searched_page_obj.first_link, 3);
         log.info("Successfully navigated");
 
+        String expected_result = get_value_from_property_file("Test_data",test_case_name+"_expected_result");
         String actual_result = getText(driver, searched_page_obj.first_link, test_case_name,4);
         Assert.assertEquals(actual_result, expected_result);
 
@@ -59,17 +60,4 @@ public class validateSearchPageContentTest extends genericMethods {
         TearDownBrowser();
     }
 
-    @DataProvider
-    public Object[][] getData() {
-        // Row stands for how many data types test should run
-        //column stands for how many values per each test
-
-        Object[][] data = new Object[1][2];
-        //0th row
-        data[0][0] = "Python";
-        data[0][1] = "Welcome to Python.org";
-
-        return data;
-
-    }
 }
