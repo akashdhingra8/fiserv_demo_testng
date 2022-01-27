@@ -1,7 +1,5 @@
 package sourceCode;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -22,12 +20,13 @@ public class utility
 	public Properties prop;  // properties file object
 
 	// function to get values from property file
-	public String get_value_from_property_file(String key) 
+	public String get_value_from_property_file(String file_name,String key)
 	{
 		prop= new Properties();
 		try
 		{
-			FileInputStream fis=new FileInputStream("resources\\resource.properties");
+			String path = runnerConfiguration.project_path + "/resources/" +file_name+".properties";
+			FileInputStream fis=new FileInputStream(path);
 			prop.load(fis);
 			fis.close();
 		}
@@ -42,7 +41,7 @@ public class utility
 	public WebDriver initialiseDriver()
 		{
 
-			String browserName = get_value_from_property_file("browser");
+			String browserName = get_value_from_property_file("resource","browser");
 			if(browserName.equalsIgnoreCase("chrome"))
 				{
 					System.setProperty("webdriver.chrome.driver", "Drivers//chromedriver_97.exe");

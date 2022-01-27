@@ -8,8 +8,6 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import java.io.IOException;
-
 public class Listeners implements ITestListener {
 //    System.out.println(runnerConfiguration.reports_dir);
     ExtentTest test;
