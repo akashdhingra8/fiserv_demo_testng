@@ -1,18 +1,18 @@
-23:16:04.066 [main] INFO  sourceCode.genericMethods - ************************************************
-23:16:04.072 [main] INFO  sourceCode.genericMethods - Test case 1 started
-23:16:04.072 [main] INFO  sourceCode.genericMethods - Test case name --> validate_first_link
-23:16:16.053 [main] INFO  sourceCode.genericMethods - URL is invoked https://www.google.com/
-23:16:16.053 [main] INFO  sourceCode.genericMethods - url is invoked 
-23:16:16.671 [main] INFO  sourceCode.genericMethods - Wait for clickable success
-23:16:16.757 [main] INFO  sourceCode.genericMethods - input successfully
-23:16:17.026 [main] INFO  sourceCode.genericMethods - Input box cleared 
-23:16:17.120 [main] INFO  sourceCode.genericMethods - Wait for clickable success
-23:16:20.816 [main] INFO  sourceCode.genericMethods - input successful
-23:16:41.658 [main] INFO  sourceCode.genericMethods - text entered
-23:16:41.769 [main] INFO  sourceCode.genericMethods - Wait for visibility success
-23:16:41.769 [main] INFO  sourceCode.genericMethods - Successfully navigated
-23:16:41.832 [main] INFO  sourceCode.genericMethods - Wait for visibility success
-23:16:41.881 [main] INFO  sourceCode.genericMethods - result is Welcome to Python.org
-23:16:42.172 [main] INFO  sourceCode.genericMethods - Test case 1 ended
-23:16:42.173 [main] INFO  sourceCode.genericMethods - Test case name --> validate_first_link
-23:16:42.173 [main] INFO  sourceCode.genericMethods - ************************************************
+18:22:47.632 [main] INFO  sourceCode.genericMethods - ************************************************
+18:22:47.646 [main] INFO  sourceCode.genericMethods - Test case 1 started
+18:22:47.646 [main] INFO  sourceCode.genericMethods - Test case name --> validate_first_link
+18:22:57.452 [main] INFO  sourceCode.genericMethods - URL is invoked https://www.google.com/
+18:22:57.452 [main] INFO  sourceCode.genericMethods - url is invoked 
+18:22:57.954 [main] INFO  sourceCode.genericMethods - Wait for clickable success
+18:22:58.037 [main] INFO  sourceCode.genericMethods - input successfully
+18:22:58.163 [main] INFO  sourceCode.genericMethods - Input box cleared 
+18:22:58.216 [main] INFO  sourceCode.genericMethods - Wait for clickable success
+18:23:07.917 [main] INFO  sourceCode.genericMethods - input successful
+18:23:24.899 [main] INFO  sourceCode.genericMethods - text entered
+18:23:25.129 [main] INFO  sourceCode.genericMethods - Wait for visibility success
+18:23:25.130 [main] INFO  sourceCode.genericMethods - Successfully navigated
+18:23:25.164 [main] INFO  sourceCode.genericMethods - Wait for visibility success
+18:23:25.200 [main] INFO  sourceCode.genericMethods - result is Welcome to Python.org
+18:23:25.391 [main] INFO  sourceCode.genericMethods - Test case 1 ended
+18:23:25.391 [main] INFO  sourceCode.genericMethods - Test case name --> validate_first_link
+18:23:25.391 [main] INFO  sourceCode.genericMethods - ************************************************
