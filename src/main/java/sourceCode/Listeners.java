@@ -14,12 +14,13 @@ public class Listeners implements ITestListener {
     String date = runnerConfiguration.set_get_date();
     String time = runnerConfiguration.set_get_time();
     String path = runnerConfiguration.create_and_set_reports_directory();
-
+    static int test_case_counter = 0;
     ExtentReports extent=extentReporterNG.getReportObject(path,time);
     ThreadLocal<ExtentTest> extentTest =new ThreadLocal<ExtentTest>();
     public void onTestStart(ITestResult result) {
         // TODO Auto-generated method stub
-        String test_case_name = result.getMethod().getMethodName();
+        test_case_counter+=1;
+        String test_case_name = result.getMethod().getMethodName() + "_count_" + test_case_counter;
         runnerConfiguration.create_and_set_screenshot_directory(test_case_name);
         test= extent.createTest(test_case_name);
         extentTest.set(test);

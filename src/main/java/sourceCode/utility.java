@@ -36,6 +36,18 @@ public class utility
 		}
 		return (prop.getProperty(key));
 	}
+
+	// function to get command line variable
+	public String get_command_line_env_variable() throws IOException {
+//		java.io.InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("my.properties");
+//		java.util.Properties properties = new Properties();
+//		properties.load(inputStream);
+		System.out.println(System.getProperty("url_engine"));
+		String url_engine = System.getProperty("url_engine");
+//		String url_engine = properties.getProperty("url_engine");
+		System.out.println(url_engine);
+		return (url_engine);
+	}
 	
 	// Loading browser --- by getting value from property file
 	public WebDriver initialiseDriver()
@@ -87,6 +99,8 @@ public class utility
 				}
 
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			driver.manage().deleteAllCookies();
+
 			return driver;
 		}
 

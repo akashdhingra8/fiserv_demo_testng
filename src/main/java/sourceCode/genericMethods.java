@@ -24,7 +24,7 @@ public class genericMethods extends utility {
             TakesScreenshot ts=(TakesScreenshot) driver;
             File source =ts.getScreenshotAs(OutputType.FILE);
             String destinationFile = path + "/" + testCaseName + "__Step_Number_" + step_num +".png";
-            FileUtils.moveFile(source,new File(destinationFile));
+            FileUtils.copyFile(source,new File(destinationFile));
 
         }
         catch (Exception e) {
@@ -90,6 +90,7 @@ public class genericMethods extends utility {
         catch (Exception e) {
             log.error("Wait for clickable not successful");
             log.error(e);
+            e.printStackTrace();
             return false;
         }
     }
@@ -143,6 +144,7 @@ public class genericMethods extends utility {
     }
     public void clearInput(WebDriver driver,By identifier_value, String image_name, int step_num) throws Exception {
         try {
+            System.out.println(identifier_value);
             Boolean result = waitForClickability(driver,identifier_value,step_num);
             if(result)
             {
@@ -161,6 +163,7 @@ public class genericMethods extends utility {
             screenCapture(driver,image_name,step_num);
             log.error("not able to clear");
             log.error(e);
+            e.printStackTrace();
             throw new Exception("Not able to clear Input object");
         }
     }
