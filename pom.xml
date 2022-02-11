@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <url_engine>${url_engine}</url_engine>
     </properties>
     <build>
         <resources>

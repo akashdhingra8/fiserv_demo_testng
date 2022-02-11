@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 52.363 s - in TestSuite
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 97.089 s <<< FAILURE! - in TestSuite
+validate_first_link(test.validateSearchPageContentTest)  Time elapsed: 79.883 s  <<< FAILURE!
+java.lang.AssertionError: expected [Welcome to Python.org] but found [Learn Python Today - Start Learning Today]
+	at test.validateSearchPageContentTest.validate_first_link(validateSearchPageContentTest.java:75)
+

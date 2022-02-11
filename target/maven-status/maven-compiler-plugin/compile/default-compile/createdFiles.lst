@@ -1,8 +1,9 @@
 sourceCode\extentReporterNG.class
-pageObjects\LandingPage.class
+pageObjects\locators.class
+pageObjects\BingEngine.class
 sourceCode\genericMethods$1.class
 sourceCode\Listeners.class
-pageObjects\SearchedPage.class
+pageObjects\GoogleEngine.class
 sourceCode\utility.class
 sourceCode\genericMethods.class
 sourceCode\runnerConfiguration.class
